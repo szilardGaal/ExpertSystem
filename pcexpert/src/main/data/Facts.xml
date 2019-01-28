@@ -37,7 +37,6 @@
             <Eval id="usage">true</Eval>
             <Eval id="cooling">false</Eval>
             <Eval id="design">true</Eval>
-            <Eval id="performance">8</Eval>
         </Evals>
     </Fact>
     
