@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Facts>
     <Fact id="gamingc1">
-        <Description value="Lowkey wannabe gayming station"/>
+        <Description value="Lowkey Wannabe GaYmInG StAtIoN"/>
         <Evals>
             <Eval id="price">false</Eval>
             <Eval id="usage">true</Eval>
@@ -12,7 +12,7 @@
     </Fact>
     
     <Fact id="gamingc2">
-        <Description value="lowkey rgb gaming station"/>
+        <Description value="Lowkey R.G.B. (!) GaYmInG StAtIoNn"/>
         <Evals>
             <Eval id="price">false</Eval>
             <Eval id="usage">true</Eval>
@@ -23,7 +23,7 @@
     </Fact>
     
     <Fact id="gaminge1">
-        <Description value="s1mple gaming station"/>
+        <Description value="S1mple Gaming Station"/>
         <Evals>
             <Eval id="price">true</Eval>
             <Eval id="usage">true</Eval>
@@ -34,7 +34,7 @@
     </Fact>
     
     <Fact id="gaminge2">
-        <Description value="rgb gaming station"/>
+        <Description value="S1mple, but pretty Rig"/>
         <Evals>
             <Eval id="price">true</Eval>
             <Eval id="usage">true</Eval>
@@ -45,7 +45,7 @@
     </Fact>
     
     <Fact id="gaminge3">
-        <Description value="watercooled gaming station"/>
+        <Description value="Watercooled Toopah Heavy Rig"/>
         <Evals>
             <Eval id="price">true</Eval>
             <Eval id="usage">true</Eval>
@@ -56,7 +56,7 @@
     </Fact>
     
     <Fact id="gaminge3">
-        <Description value="rgb watercooled gaming station"/>
+        <Description value="Fortnite Streamer Rig"/>
         <Evals>
             <Eval id="price">true</Eval>
             <Eval id="usage">true</Eval>
@@ -67,7 +67,7 @@
     </Fact>
     
     <Fact id="workc1">
-        <Description value="240p video player"/>
+        <Description value="240p Video Player"/>
         <Evals>
             <Eval id="price">false</Eval>
             <Eval id="usage">false</Eval>
@@ -78,7 +78,7 @@
     </Fact>
     
     <Fact id="workc2">
-        <Description value="240p but looks decent"/>
+        <Description value="240p BUT WITH RGB"/>
         <Evals>
             <Eval id="price">false</Eval>
             <Eval id="usage">false</Eval>
@@ -89,7 +89,7 @@
     </Fact>
     
     <Fact id="worke1">
-        <Description value="steve job's legacy"/>
+        <Description value="Steve Job's Legacy"/>
         <Evals>
             <Eval id="price">true</Eval>
             <Eval id="usage">false</Eval>
@@ -100,7 +100,7 @@
     </Fact>
     
     <Fact id="worke2">
-        <Description value="lvl 35 boss"/>
+        <Description value="lvl 35 Mafia Boss"/>
         <Evals>
             <Eval id="price">true</Eval>
             <Eval id="usage">false</Eval>
@@ -111,7 +111,7 @@
     </Fact>
     
     <Fact id="worke3">
-        <Description value="moderate secretary"/>
+        <Description value="Moderate Secretary Set"/>
         <Evals>
             <Eval id="price">true</Eval>
             <Eval id="usage">false</Eval>
@@ -123,7 +123,7 @@
     
         
     <Fact id="worke4">
-        <Description value="complete gentleman"/>
+        <Description value="Complete Gentleman"/>
         <Evals>
             <Eval id="price">true</Eval>
             <Eval id="usage">false</Eval>
