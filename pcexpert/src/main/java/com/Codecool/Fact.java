@@ -1,11 +1,13 @@
 package com.Codecool;
 
 import java.util.Set;
+import java.util.HashMap;
 
 public class Fact {
 
     String id;
     String description;
+    HashMap<String, Boolean> evals = new HashMap<>();
 
     public Fact(String id, String description) {
         this.id = id;
@@ -13,10 +15,11 @@ public class Fact {
     }
 
     public Set<String> getIdSet() {
-        return null;
+        return evals.keySet();
     }
 
     public void setFactValueById(String id, boolean value) {
+       evals.put(id, value);
     }
 
     public boolean getValueById(String id) {
