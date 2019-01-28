@@ -14,20 +14,20 @@ import java.util.List;
 public class FactParser extends XMLParser {
 
     FactRepository factRepo = new FactRepository();
-    List<FactRepository.Fact> factList = new ArrayList<>();
+    List<Fact> factList = new ArrayList<>();
+    String filePath;
+
+    public FactParser(String path) {
+        filePath = path;
+        loadXMLDocument(path);
+    }
 
     public FactRepository getFactRepo() {
         return factRepo;
     }
 
-    @Override
-    public void loadXMLDocument(String path) {
+    public void load() {
         try {
-            DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
-            Document doc = docBuilder.parse(new File(path));
-
-            doc.getDocumentElement().normalize();
             NodeList nList = doc.getElementsByTagName("Fact");
 
             for (int i = 0; i < nList.getLength(); i++) {
@@ -40,7 +40,7 @@ public class FactParser extends XMLParser {
                     if (lol.getNodeType() == lol.ELEMENT_NODE) {
                         Element whatever = (Element) lol;
                         String description = whatever.getAttribute("value");
-                        factList.add(factRepo.new Fact(id, description));
+                        factList.add(new Fact(id, description));
                     }
                 }
             }
