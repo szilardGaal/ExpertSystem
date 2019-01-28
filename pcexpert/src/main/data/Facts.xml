@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Facts>
+    <Fact id="gamingc1">
+        <Description value="Lowkey wannabe gayming station"/>
+        <Evals>
+            <Eval id="price">false</Eval>
+            <Eval id="usage">true</Eval>
+            <Eval id="cooling">false</Eval>
+            <Eval id="design">false</Eval>
+            <Eval id="performance">3</Eval>
+        </Evals>
+    </Fact>
+    
+    <Fact id="gamingc2">
+        <Description value="lowkey rgb gaming station"/>
+        <Evals>
+            <Eval id="price">false</Eval>
+            <Eval id="usage">true</Eval>
+            <Eval id="cooling">false</Eval>
+            <Eval id="design">true</Eval>
+            <Eval id="performance">4</Eval>
+        </Evals>
+    </Fact>
+    
+    <Fact id="gaminge1">
+        <Description value="s1mple gaming station"/>
+        <Evals>
+            <Eval id="price">true</Eval>
+            <Eval id="usage">true</Eval>
+            <Eval id="cooling">false</Eval>
+            <Eval id="design">false</Eval>
+            <Eval id="performance">5</Eval>
+        </Evals>
+    </Fact>
+    
+    <Fact id="gaminge2">
+        <Description value="rgb gaming station"/>
+        <Evals>
+            <Eval id="price">true</Eval>
+            <Eval id="usage">true</Eval>
+            <Eval id="cooling">false</Eval>
+            <Eval id="design">true</Eval>
+            <Eval id="performance">8</Eval>
+        </Evals>
+    </Fact>
+    
+    <Fact id="gaminge3">
+        <Description value="watercooled gaming station"/>
+        <Evals>
+            <Eval id="price">true</Eval>
+            <Eval id="usage">true</Eval>
+            <Eval id="cooling">true</Eval>
+            <Eval id="design">false</Eval>
+            <Eval id="performance">9</Eval>
+        </Evals>
+    </Fact>
+    
+    <Fact id="gaminge3">
+        <Description value="rgb watercooled gaming station"/>
+        <Evals>
+            <Eval id="price">true</Eval>
+            <Eval id="usage">true</Eval>
+            <Eval id="cooling">true</Eval>
+            <Eval id="design">true</Eval>
+            <Eval id="performance">10</Eval>
+        </Evals>
+    </Fact>
+    
+    <Fact id="workc1">
+        <Description value="240p video player"/>
+        <Evals>
+            <Eval id="price">false</Eval>
+            <Eval id="usage">false</Eval>
+            <Eval id="cooling">false</Eval>
+            <Eval id="design">false</Eval>
+            <Eval id="performance">2</Eval>
+        </Evals>
+    </Fact>
+    
+    <Fact id="workc2">
+        <Description value="240p but looks decent"/>
+        <Evals>
+            <Eval id="price">false</Eval>
+            <Eval id="usage">false</Eval>
+            <Eval id="cooling">false</Eval>
+            <Eval id="design">true</Eval>
+            <Eval id="performance">3</Eval>
+        </Evals>
+    </Fact>
+    
+    <Fact id="worke1">
+        <Description value="steve job's legacy"/>
+        <Evals>
+            <Eval id="price">true</Eval>
+            <Eval id="usage">false</Eval>
+            <Eval id="cooling">true</Eval>
+            <Eval id="design">true</Eval>
+            <Eval id="performance">8</Eval>
+        </Evals>
+    </Fact>
+    
+    <Fact id="worke2">
+        <Description value="lvl 35 boss"/>
+        <Evals>
+            <Eval id="price">true</Eval>
+            <Eval id="usage">false</Eval>
+            <Eval id="cooling">false</Eval>
+            <Eval id="design">true</Eval>
+            <Eval id="performance">6</Eval>
+        </Evals>
+    </Fact>
+    
+    <Fact id="worke3">
+        <Description value="moderate secretary"/>
+        <Evals>
+            <Eval id="price">true</Eval>
+            <Eval id="usage">false</Eval>
+            <Eval id="cooling">false</Eval>
+            <Eval id="design">false</Eval>
+            <Eval id="performance">5</Eval>
+        </Evals>
+    </Fact>
+    
+        
+    <Fact id="worke4">
+        <Description value="complete gentleman"/>
+        <Evals>
+            <Eval id="price">true</Eval>
+            <Eval id="usage">false</Eval>
+            <Eval id="cooling">true</Eval>
+            <Eval id="design">false</Eval>
+            <Eval id="performance">6</Eval>
+        </Evals>
+    </Fact>
+</Facts>

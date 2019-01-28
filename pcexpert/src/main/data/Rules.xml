@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Rules>
+    <Rule id="price">
+        <Question>Do you have 1.000.000 HUF for the ultimate pussymagnet masterrace pc of your dreams?</Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue value="yes"/>
+            </Selection>
+            <Selection value="false">
+                <SingleValue value="no"/>
+            </Selection>
+        </Answer>
+    </Rule>
+    
+    <Rule id="usage">
+        <Question>What is more important for you?</Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue value="gaming"/>
+            </Selection>
+            <Selection value="false">
+                <SingleValue value="working"/>
+            </Selection>
+        </Answer>
+    </Rule>
+    
+    <Rule id="cooling">
+        <Question>Which cooling method do you prefer?</Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue value="water cooling"/>
+            </Selection>
+            <Selection value="false">
+                <SingleValue value="fan cooling"/>
+            </Selection>
+        </Answer>
+    </Rule>
+    
+        <Rule id="design">
+        <Question>Do you want sum eye-candy?</Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue value="RGB"/>
+            </Selection>
+            <Selection value="false">
+                <SingleValue value="plain"/>
+            </Selection>
+        </Answer>
+    </Rule>
+</Rules>
