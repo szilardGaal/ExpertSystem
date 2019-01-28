@@ -1,5 +1,6 @@
 package com.Codecool;
 
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -7,8 +8,10 @@ public class FactRepository {
 
     FactIterator factIter;
     Fact fact;
+    HashMap<Fact, Boolean> theMap;
 
     public void addFact(Fact fact) {
+        //maphoz adunk valahogy
     }
 
     public FactIterator getIterator() {
@@ -16,7 +19,7 @@ public class FactRepository {
     }
 
 
-    private class Fact {
+    public class Fact {
 
         String id;
         String description;
