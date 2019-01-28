@@ -8,10 +8,13 @@ import org.w3c.dom.NodeList;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FactParser extends XMLParser {
 
-    FactRepository factRepo;
+    FactRepository factRepo = new FactRepository();
+    List<FactRepository.Fact> factList = new ArrayList<>();
 
     public FactRepository getFactRepo() {
         return factRepo;
@@ -27,18 +30,16 @@ public class FactParser extends XMLParser {
             doc.getDocumentElement().normalize();
             NodeList nList = doc.getElementsByTagName("Fact");
 
-
             for (int i = 0; i < nList.getLength(); i++) {
                 Node nNode = nList.item(i);
                 if (nNode.getNodeType() == nNode.ELEMENT_NODE) {
                     Element eElement = (Element) nNode;
                     String id = eElement.getAttribute("id");
                     NodeList child = eElement.getChildNodes();
-                    Node cucc = child.item(0);
-                    if (cucc.getNodeType() == cucc.ELEMENT_NODE) {
-                        Element childElement = (Element) cucc;
-                        String description = childElement.getAttribute("value");
-
+                    Node lol = child.item(1);
+                    if (lol.getNodeType() == lol.ELEMENT_NODE) {
+                        Element whatever = (Element) lol;
+                        String description = whatever.getAttribute("value");
                         factList.add(factRepo.new Fact(id, description));
                     }
                 }

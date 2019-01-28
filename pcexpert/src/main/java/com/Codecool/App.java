@@ -7,6 +7,6 @@ public class App
         FactParser fParser = new FactParser();
         RuleParser rParser = new RuleParser();
         ESProvider provider = new ESProvider(fParser, rParser);
-
+        fParser.loadXMLDocument("src/main/data/Facts.xml");
     }
 }

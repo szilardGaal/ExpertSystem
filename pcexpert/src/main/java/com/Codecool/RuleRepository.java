@@ -15,7 +15,7 @@ public class RuleRepository {
         return questionIter;
     }
 
-    private class QuestionIteraton implements Iterator {
+    public class QuestionIteraton implements Iterator {
 
         @Override
         public boolean hasNext() {
@@ -28,7 +28,7 @@ public class RuleRepository {
         }
     }
 
-    private class Question {
+    public class Question {
 
         Answer answer;
         String question;
@@ -57,7 +57,7 @@ public class RuleRepository {
         }
 
 
-        private class Answer {
+        public class Answer {
 
             Value value;
 
@@ -79,6 +79,23 @@ public class RuleRepository {
                 }
 
             }
+            public class MultipleValue extends Value {
+
+
+
+                public MultipleValue(List<String> param, boolean selectionType) {
+                }
+
+            }
+
+            public class SingleValue extends Value {
+
+                public SingleValue(String param, boolean selectionType) {
+
+                }
+
+            }
         }
+
     }
 }
