@@ -7,7 +7,6 @@
             <Eval id="usage">true</Eval>
             <Eval id="cooling">false</Eval>
             <Eval id="design">false</Eval>
-            <Eval id="performance">3</Eval>
         </Evals>
     </Fact>
     
@@ -18,7 +17,6 @@
             <Eval id="usage">true</Eval>
             <Eval id="cooling">false</Eval>
             <Eval id="design">true</Eval>
-            <Eval id="performance">4</Eval>
         </Evals>
     </Fact>
     
@@ -29,7 +27,6 @@
             <Eval id="usage">true</Eval>
             <Eval id="cooling">false</Eval>
             <Eval id="design">false</Eval>
-            <Eval id="performance">5</Eval>
         </Evals>
     </Fact>
     
@@ -40,7 +37,6 @@
             <Eval id="usage">true</Eval>
             <Eval id="cooling">false</Eval>
             <Eval id="design">true</Eval>
-            <Eval id="performance">8</Eval>
         </Evals>
     </Fact>
     
@@ -51,7 +47,6 @@
             <Eval id="usage">true</Eval>
             <Eval id="cooling">true</Eval>
             <Eval id="design">false</Eval>
-            <Eval id="performance">9</Eval>
         </Evals>
     </Fact>
     
@@ -62,7 +57,6 @@
             <Eval id="usage">true</Eval>
             <Eval id="cooling">true</Eval>
             <Eval id="design">true</Eval>
-            <Eval id="performance">10</Eval>
         </Evals>
     </Fact>
     
@@ -73,7 +67,6 @@
             <Eval id="usage">false</Eval>
             <Eval id="cooling">false</Eval>
             <Eval id="design">false</Eval>
-            <Eval id="performance">2</Eval>
         </Evals>
     </Fact>
     
@@ -84,7 +77,6 @@
             <Eval id="usage">false</Eval>
             <Eval id="cooling">false</Eval>
             <Eval id="design">true</Eval>
-            <Eval id="performance">3</Eval>
         </Evals>
     </Fact>
     
@@ -95,7 +87,6 @@
             <Eval id="usage">false</Eval>
             <Eval id="cooling">true</Eval>
             <Eval id="design">true</Eval>
-            <Eval id="performance">8</Eval>
         </Evals>
     </Fact>
     
@@ -106,7 +97,6 @@
             <Eval id="usage">false</Eval>
             <Eval id="cooling">false</Eval>
             <Eval id="design">true</Eval>
-            <Eval id="performance">6</Eval>
         </Evals>
     </Fact>
     
@@ -117,7 +107,6 @@
             <Eval id="usage">false</Eval>
             <Eval id="cooling">false</Eval>
             <Eval id="design">false</Eval>
-            <Eval id="performance">5</Eval>
         </Evals>
     </Fact>
     
@@ -129,7 +118,6 @@
             <Eval id="usage">false</Eval>
             <Eval id="cooling">true</Eval>
             <Eval id="design">false</Eval>
-            <Eval id="performance">6</Eval>
         </Evals>
     </Fact>
 </Facts>

@@ -1,21 +1,24 @@
 package com.Codecool;
 
+import java.util.HashMap;
 import java.util.Iterator;
-import java.util.List;
+import java.util.Set;
 
 public class RuleRepository {
 
-    Question question;
-    QuestionIterator questionIter;
+    RuleIterator ruleIter;
+    Rule rule;
+    HashMap<Fact, Boolean> theMap;
 
-    public void addQuestion(Question question) {
+    public void addRule(Rule rule) {
+        //maphoz adunk valahogy
     }
 
-    public QuestionIterator getIterator() {
-        return questionIter;
+    public RuleIterator getIterator() {
+        return ruleIter;
     }
 
-    public class QuestionIteraton implements Iterator {
+    private class RuleIterator implements Iterator {
 
         @Override
         public boolean hasNext() {
