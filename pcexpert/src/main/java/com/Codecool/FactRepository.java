@@ -2,16 +2,17 @@ package com.Codecool;
 
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Set;
+import java.util.List;
+import java.util.ArrayList;
 
 public class FactRepository {
 
     FactIterator factIter;
-    Fact fact;
+    List<Fact> factsList = new ArrayList<>();
     HashMap<Fact, Boolean> theMap;
 
     public void addFact(Fact fact) {
-        //maphoz adunk valahogy
+        factsList.add(fact);
     }
 
     public FactIterator getIterator() {
@@ -28,6 +29,11 @@ public class FactRepository {
         @Override
         public Object next() {
             return null;
+        }
+
+        @Override
+        public void remove() {
+            //to keep intelliJ silent.
         }
     }
 }

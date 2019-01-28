@@ -1,24 +1,14 @@
 package com.Codecool;
 
-import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-
 public class FactParser extends XMLParser {
 
     FactRepository factRepo = new FactRepository();
-    List<Fact> factList = new ArrayList<>();
-    String filePath;
 
     public FactParser(String path) {
-        filePath = path;
         loadXMLDocument(path);
     }
 
@@ -40,10 +30,11 @@ public class FactParser extends XMLParser {
                     if (lol.getNodeType() == lol.ELEMENT_NODE) {
                         Element whatever = (Element) lol;
                         String description = whatever.getAttribute("value");
-                        factList.add(new Fact(id, description));
+                        factRepo.addFact(new Fact(id, description));
                     }
                 }
             }
+
         } catch (Exception e) {
             e.printStackTrace();
         }
