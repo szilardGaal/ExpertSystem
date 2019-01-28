@@ -26,4 +26,9 @@ public class Fact {
     public String getDescription() {
         return this.description;
     }
+
+    @Override
+    public String toString() {
+        return id + "" + description;
+    }
 }

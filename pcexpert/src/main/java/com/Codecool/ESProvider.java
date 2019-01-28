@@ -12,6 +12,10 @@ public class ESProvider {
         rRepo = rParser.getRuleRepository();
     }
 
+    public FactRepository getFRepo() {
+        return fRepo;
+    }
+
     public void collectAnswer() {
     }
 
