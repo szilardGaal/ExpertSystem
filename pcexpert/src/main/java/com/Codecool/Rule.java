@@ -15,6 +15,10 @@ public class Rule {
         this.question = question;
     }
 
+    public String getId() {
+        return id;
+    }
+
     public Set<String> getIdSet() {
         return evals.keySet();
     }

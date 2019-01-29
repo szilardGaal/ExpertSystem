@@ -20,5 +20,8 @@ public class App
             System.out.println(rule.getIdSet());
             System.out.println(rule.getAnswerSet());
         }
+
+        provider.getRRepo().getAnswers();
+        System.out.println(provider.getRRepo().getQuestionsList());
     }
 }

@@ -4,8 +4,9 @@ import java.util.*;
 
 public class RuleRepository {
 
-    private RuleIterator ruleIter = new RuleIterator();
+    private QuestionIterator qIter = new QuestionIterator();
     private List<Rule> rulesList = new ArrayList<>();
+    private List<Question> questionsList = new ArrayList<>();
 
     public void addRule(Rule rule) {
         rulesList.add(rule);
@@ -15,11 +16,27 @@ public class RuleRepository {
         return rulesList;
     }
 
-    public RuleIterator getIterator() {
-        return ruleIter;
+    public List<Question> getQuestionsList() {
+        return questionsList;
     }
 
-    private class RuleIterator implements Iterator {
+    public void getAnswers() {
+        Scanner sc = new Scanner(System.in);
+        for (int j = 0; j < rulesList.size(); j++) {
+            System.out.println(rulesList.get(j).getQuestion());
+            System.out.println(rulesList.get(j).getIdSet());
+            String input = sc.nextLine().toLowerCase();
+            if (rulesList.get(j).getIdSet().toString().contains(input));
+                questionsList.add(new Question(rulesList.get(j).getId(), rulesList.get(j).getQuestion(),
+                        new Answer(input)));
+        }
+    }
+
+    public QuestionIterator getIterator() {
+        return qIter;
+    }
+
+    private class QuestionIterator implements Iterator {
 
         private int currentIndex = 0;
 
