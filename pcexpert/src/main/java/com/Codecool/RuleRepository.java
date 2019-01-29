@@ -4,9 +4,8 @@ import java.util.*;
 
 public class RuleRepository {
 
-    RuleIterator ruleIter;
-    List<Rule> rulesList = new ArrayList<>();
-    HashMap<Rule, Boolean> theMap;
+    private RuleIterator ruleIter = new RuleIterator();
+    private List<Rule> rulesList = new ArrayList<>();
 
     public void addRule(Rule rule) {
         rulesList.add(rule);
@@ -22,14 +21,18 @@ public class RuleRepository {
 
     private class RuleIterator implements Iterator {
 
+        private int currentIndex = 0;
+
         @Override
         public boolean hasNext() {
-            return false;
+            return currentIndex < rulesList.size();
         }
 
         @Override
         public Object next() {
-            return null;
+            Rule rule = rulesList.get(currentIndex);
+            currentIndex ++;
+            return rule;
         }
 
         @Override

@@ -2,9 +2,9 @@ package com.Codecool;
 
 public class Question {
 
-    Answer answer;
-    String question;
-    String id;
+    private Answer answer;
+    private String question;
+    private String id;
 
     public Question(String id, String question, Answer answer) {
         this.question = question;
@@ -13,7 +13,7 @@ public class Question {
     }
 
     public String getId() {
-        return "";
+        return id;
     }
 
     public String getQuestion() {

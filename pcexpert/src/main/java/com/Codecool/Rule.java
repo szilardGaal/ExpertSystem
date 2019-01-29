@@ -24,12 +24,12 @@ public class Rule {
     }
 
 
-    public void setFactValueById(String id, boolean value) {
+    public void setRuleValueById(String id, boolean value) {
         evals.put(id, value);
     }
 
     public boolean getValueById(String id) {
-        return false;
+        return evals.get(id);
     }
 
     public String getQuestion() {
