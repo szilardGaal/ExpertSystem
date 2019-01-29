@@ -24,11 +24,16 @@ public class RuleRepository {
         Scanner sc = new Scanner(System.in);
         for (int j = 0; j < rulesList.size(); j++) {
             System.out.println(rulesList.get(j).getQuestion());
-            System.out.println(rulesList.get(j).getIdSet());
-            String input = sc.nextLine().toLowerCase();
-            if (rulesList.get(j).getIdSet().toString().contains(input));
-                questionsList.add(new Question(rulesList.get(j).getId(), rulesList.get(j).getQuestion(),
-                        new Answer(input)));
+            while (true) {
+                System.out.println("Please answer: " + rulesList.get(j).getIdSet());
+                String input = sc.nextLine().toLowerCase();
+                if (rulesList.get(j).getIdSet().contains(input)) {
+                    questionsList.add(new Question(rulesList.get(j).getId(),
+                                                   rulesList.get(j).getQuestion(),
+                                                   new Answer(input)));
+                    break;
+                }
+            }
         }
     }
 
