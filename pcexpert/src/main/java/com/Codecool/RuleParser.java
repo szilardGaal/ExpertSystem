@@ -48,10 +48,28 @@ public class RuleParser extends XMLParser {
                             String description = descriptionElement.getTextContent();
                             rule = new Rule(id, description);
                             ruleRepo.addRule(rule);
-                            rule.setFactValueById(id, false);
+                            Node answers = actualElements.get(1);
+                            NodeList answersChildren = answers.getChildNodes();
+                            for (int l=1; l < answersChildren.getLength(); l++) {
+                                Node answersChild = answersChildren.item(l);
+                                System.out.println("0");
+                                if (answersChild.getNodeType() == answersChild.ELEMENT_NODE) {
+                                    System.out.println("1");
+                                    Element answersChildElement = (Element) answersChild;
+                                    boolean answerValue = Boolean.valueOf(answersChildElement.getAttribute("value"));
+                                    NodeList answersGrandchildren = answersChild.getChildNodes();
+                                    for (int m=0; m < answersGrandchildren.getLength(); m++) {
+                                        Node answersGrandchild = answersGrandchildren.item(m);
+                                        if (answersGrandchild.getNodeType() == answersGrandchild.ELEMENT_NODE) {
+                                            String answerKey = ((Element) answersGrandchild).getAttribute("value");
+                                            rule.setRuleValueById(answerKey, answerValue);
+                                        }
+                                    }
                                 }
                             }
                         }
+                    }
+                }
 
             } catch (Exception e) {
                 e.printStackTrace();
