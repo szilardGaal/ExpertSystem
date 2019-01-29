@@ -1,17 +1,19 @@
 package com.Codecool;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.*;
 
 public class RuleRepository {
 
     RuleIterator ruleIter;
-    Rule rule;
-    HashMap<Fact, Boolean> theMap;
+    List<Rule> rulesList = new ArrayList<>();
+    HashMap<Rule, Boolean> theMap;
 
     public void addRule(Rule rule) {
-        //maphoz adunk valahogy
+        rulesList.add(rule);
+    }
+
+    public List<Rule> getRulesList() {
+        return rulesList;
     }
 
     public RuleIterator getIterator() {

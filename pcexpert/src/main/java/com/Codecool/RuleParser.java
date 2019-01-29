@@ -23,25 +23,38 @@ public class RuleParser extends XMLParser {
     }
 
     public void load() {
-        try {
-            NodeList nList = doc.getElementsByTagName("Rules");
+            try {
+                NodeList nList = doc.getElementsByTagName("Rule");
 
-            for (int i = 0; i < nList.getLength(); i++) {
-                Node nNode = nList.item(i);
-                if (nNode.getNodeType() == nNode.ELEMENT_NODE) {
-                    Element eElement = (Element) nNode;
-                    String id = eElement.getAttribute("id");
-                    NodeList child = eElement.getChildNodes();
-                    Node lol = child.item(1);
-                    if (lol.getNodeType() == lol.ELEMENT_NODE) {
-                        Element whatever = (Element) lol;
-                        String description = whatever.getAttribute("value");
-                        ruleList.add(new Rule(id, description));
-                    }
-                }
+                for (int i = 0; i < nList.getLength(); i++) {
+                    Node nNode = nList.item(i);
+
+                    if (nNode.getNodeType() == nNode.ELEMENT_NODE) {
+                        Element eElement = (Element) nNode;
+                        String id = eElement.getAttribute("id");
+                        NodeList children = eElement.getChildNodes();
+                        List<Element> actualElements= new ArrayList<>();
+
+                        for (int j=0; j < children.getLength(); j++ ) {
+                            if (children.item(j).getNodeType() == children.item(j).ELEMENT_NODE) {
+                                actualElements.add((Element) children.item(j));
+                            }
+                        }
+
+                        Node child = actualElements.get(0);
+                        Rule rule;
+                        if (child.getNodeType() == child.ELEMENT_NODE) {
+                            Element descriptionElement = (Element) child;
+                            String description = descriptionElement.getTextContent();
+                            rule = new Rule(id, description);
+                            ruleRepo.addRule(rule);
+                            rule.setFactValueById(id, false);
+                                }
+                            }
+                        }
+
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-        } catch (Exception e) {
-            e.printStackTrace();
         }
-    }
 }

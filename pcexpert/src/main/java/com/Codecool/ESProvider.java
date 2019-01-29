@@ -26,4 +26,7 @@ public class ESProvider {
     public String evaluate() {
         return "";
     }
-}
+
+    public RuleRepository getRRepo() { return rRepo;}
+    }
+
