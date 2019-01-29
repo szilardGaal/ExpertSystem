@@ -12,6 +12,7 @@ public class App
         List<Fact> whatever = provider.getFRepo().getFactsList();
         for (Fact fact : whatever) {
             System.out.println(fact);
+            System.out.println(fact.getIdSet());
         }
     }
 }
