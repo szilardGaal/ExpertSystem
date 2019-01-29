@@ -14,5 +14,11 @@ public class App
             System.out.println(fact);
             System.out.println(fact.getIdSet());
         }
+        List<Rule> whatever2 = provider.getRRepo().getRulesList();
+        for (Rule rule : whatever2) {
+            System.out.println(rule);
+            System.out.println(rule.getIdSet());
+            System.out.println(rule.getAnswerSet());
+        }
     }
 }
