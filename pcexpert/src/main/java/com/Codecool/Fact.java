@@ -5,9 +5,9 @@ import java.util.HashMap;
 
 public class Fact {
 
-    String id;
-    String description;
-    HashMap<String, Boolean> evals = new HashMap<>();
+    private String id;
+    private String description;
+    private HashMap<String, Boolean> evals = new HashMap<>();
 
     public Fact(String id, String description) {
         this.id = id;
@@ -23,7 +23,7 @@ public class Fact {
     }
 
     public boolean getValueById(String id) {
-        return false;
+        return evals.get(id);
     }
 
     public String getDescription() {

@@ -13,4 +13,9 @@ public class QuestionIterator implements Iterator {
     public Object next() {
         return null;
     }
+
+    @Override
+    public void remove() {
+
+    }
 }

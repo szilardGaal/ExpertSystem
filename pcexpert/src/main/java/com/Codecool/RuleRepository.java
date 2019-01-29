@@ -29,5 +29,10 @@ public class RuleRepository {
         public Object next() {
             return null;
         }
+
+        @Override
+        public void remove() {
+
+        }
     }
 }

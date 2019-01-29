@@ -1,18 +1,18 @@
 package com.Codecool;
 
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ArrayList;
 
 public class FactRepository {
 
-    FactIterator factIter;
-    List<Fact> factsList = new ArrayList<>();
-    HashMap<Fact, Boolean> theMap;
+    private FactIterator factIter = new FactIterator();
+    private List<Fact> factsList = new ArrayList<>();
+
 
     public void addFact(Fact fact) {
         factsList.add(fact);
+
     }
 
     public List<Fact> getFactsList() {
@@ -25,14 +25,18 @@ public class FactRepository {
 
     private class FactIterator implements Iterator {
 
+        private int currentIndex = 0;
+
         @Override
         public boolean hasNext() {
-            return false;
+            return currentIndex < factsList.size();
         }
 
         @Override
         public Object next() {
-            return null;
+            Fact fact = factsList.get(currentIndex);
+            currentIndex ++;
+            return fact;
         }
 
         @Override
