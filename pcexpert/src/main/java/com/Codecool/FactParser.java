@@ -48,9 +48,11 @@ public class FactParser extends XMLParser {
 
                         NodeList values = actualElements.get(1).getChildNodes();
                         for (int k=0; k < values.getLength(); k ++) {
-                            String name = ((Element) values.item(k)).getAttribute("id");
-                            Boolean bool = Boolean.valueOf(values.item(k).getTextContent());
-                            fact.setFactValueById(name, bool);
+                            if (values.item(k).getNodeType() == values.item(k).ELEMENT_NODE) {
+                                String name = ((Element) values.item(k)).getAttribute("id");
+                                Boolean bool = Boolean.valueOf(values.item(k).getTextContent());
+                                fact.setFactValueById(name, bool);
+                            }
                         }
                     }
                 }
