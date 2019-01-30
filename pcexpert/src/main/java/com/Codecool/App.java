@@ -23,5 +23,6 @@ public class App
 
         provider.getRRepo().getAnswers();
         System.out.println(provider.getRRepo().getQuestionsList());
+        provider.matchAnswers();
     }
 }

@@ -33,25 +33,22 @@ public class ESProvider {
     public RuleRepository getRRepo() { return rRepo;}
 
 
-    public void matchAnswers(){
-
-    List<Question> qlist = rRepo.getQuestionsList();
-
-    for (int i = 0;i<qlist.size();i++ ){
-        qlist.get(i).getAnswer();
-        qlist.get(i).getId();
-    }
-    List<Fact> flist = fRepo.getFactsList();
-    for (int i = 0; i< flist.size();i++){
-        Set<String> tempset = flist.get(i).getIdSet();
-        for (String id : tempset){
-            if (flist.get(i).getValueById(id) != qlist.get(i).getAnswer().getValue().getSelectionType()) {
-
-                continue;
-
+    public void matchAnswers() {
+        List<Question> qlist = rRepo.getQuestionsList();
+        System.out.println(qlist.toString());
+        List<Fact> flist = fRepo.getFactsList();
+        System.out.println(flist.toString());
+        for (int i = 0; i< flist.size();i++){
+            Set<String> tempset = flist.get(i).getIdSet();
+            for (String id : tempset) {
+                if (flist.get(i).getValueById(id) == qlist.get(i).getAnswer().getValue().getSelectionType()) {
+                    if (i == 3) {
+                        System.out.println("Good one");
+                    } else {
+                        continue;
+                    }
+                }
             }
-            System.out.println("addtolist");
-        }
     }
 
     }
