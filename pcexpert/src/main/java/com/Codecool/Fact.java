@@ -19,7 +19,7 @@ public class Fact {
     }
 
     public void setFactValueById(String id, boolean value) {
-       evals.put(id, value);
+        evals.put(id, value);
     }
 
     public boolean getValueById(String id) {

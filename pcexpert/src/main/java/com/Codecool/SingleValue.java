@@ -13,7 +13,6 @@ public class SingleValue extends Value {
     }
 
 
-
     @Override
     public String getInputPattern() {
         return param;

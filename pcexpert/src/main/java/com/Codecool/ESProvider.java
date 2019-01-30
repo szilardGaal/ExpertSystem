@@ -36,7 +36,7 @@ public class ESProvider {
     }
 
     public List<String> matchAnswersIterator() {
-        List <String> computers = new ArrayList<>();
+        List<String> computers = new ArrayList<>();
 
         FactRepository.FactIterator fIter = fRepo.getIterator();
 
@@ -56,30 +56,6 @@ public class ESProvider {
         }
 
         return computers;
-    }
-
-
-    public void matchAnswers(){
-
-        List<Question> qlist = rRepo.getQuestionsList();
-
-        for (int i = 0;i<qlist.size();i++ ){
-            qlist.get(i).getAnswer();
-            qlist.get(i).getId();
-        }
-        List<Fact> flist = fRepo.getFactsList();
-        for (int i = 0; i< flist.size();i++){
-            Set<String> tempset = flist.get(i).getIdSet();
-            for (String id : tempset){
-                if (flist.get(i).getValueById(id) != qlist.get(i).getAnswer().getValue().getSelectionType()) {
-
-                    continue;
-
-                }
-                System.out.println("addtolist");
-            }
-        }
-
     }
 }
 

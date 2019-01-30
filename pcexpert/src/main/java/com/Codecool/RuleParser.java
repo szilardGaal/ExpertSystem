@@ -30,9 +30,9 @@ public class RuleParser extends XMLParser {
                     Element eElement = (Element) nNode;
                     String id = eElement.getAttribute("id");
                     NodeList children = eElement.getChildNodes();
-                    List<Element> actualElements= new ArrayList<>();
+                    List<Element> actualElements = new ArrayList<>();
 
-                    for (int j=0; j < children.getLength(); j++ ) {
+                    for (int j = 0; j < children.getLength(); j++) {
                         if (children.item(j).getNodeType() == children.item(j).ELEMENT_NODE) {
                             actualElements.add((Element) children.item(j));
                         }
@@ -47,7 +47,7 @@ public class RuleParser extends XMLParser {
                         ruleRepo.addRule(rule);
                         Node answers = actualElements.get(1);
                         NodeList answersChildren = answers.getChildNodes();
-                        for (int l=1; l < answersChildren.getLength(); l++) {
+                        for (int l = 1; l < answersChildren.getLength(); l++) {
                             Node answersChild = answersChildren.item(l);
                             System.out.println("0");
                             if (answersChild.getNodeType() == answersChild.ELEMENT_NODE) {
@@ -55,7 +55,7 @@ public class RuleParser extends XMLParser {
                                 Element answersChildElement = (Element) answersChild;
                                 boolean answerValue = Boolean.valueOf(answersChildElement.getAttribute("value"));
                                 NodeList answersGrandchildren = answersChild.getChildNodes();
-                                for (int m=0; m < answersGrandchildren.getLength(); m++) {
+                                for (int m = 0; m < answersGrandchildren.getLength(); m++) {
                                     Node answersGrandchild = answersGrandchildren.item(m);
                                     if (answersGrandchild.getNodeType() == answersGrandchild.ELEMENT_NODE) {
                                         String answerKey = ((Element) answersGrandchild).getAttribute("value");

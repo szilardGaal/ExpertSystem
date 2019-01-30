@@ -38,7 +38,7 @@ public class FactRepository {
         @Override
         public Fact next() {
             Fact fact = fList.get(currentIndex);
-            currentIndex ++;
+            currentIndex++;
             return fact;
         }
 

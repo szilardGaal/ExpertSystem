@@ -30,9 +30,9 @@ public class FactParser extends XMLParser {
                     Element eElement = (Element) nNode;
                     String id = eElement.getAttribute("id");
                     NodeList children = eElement.getChildNodes();
-                    List<Element> actualElements= new ArrayList<>();
+                    List<Element> actualElements = new ArrayList<>();
 
-                    for (int j=0; j < children.getLength(); j++ ) {
+                    for (int j = 0; j < children.getLength(); j++) {
                         if (children.item(j).getNodeType() == children.item(j).ELEMENT_NODE) {
                             actualElements.add((Element) children.item(j));
                         }
@@ -47,7 +47,7 @@ public class FactParser extends XMLParser {
                         factRepo.addFact(fact);
 
                         NodeList values = actualElements.get(1).getChildNodes();
-                        for (int k=0; k < values.getLength(); k ++) {
+                        for (int k = 0; k < values.getLength(); k++) {
                             Node inner = values.item(k);
                             if (inner.getNodeType() == inner.ELEMENT_NODE) {
                                 Element innerElement = (Element) inner;

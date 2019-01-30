@@ -38,8 +38,8 @@ public class RuleRepository {
                 String input = sc.nextLine();
                 if (rulesList.get(j).getIdSet().contains(input)) {
                     questionsList.add(new Question(rulesList.get(j).getId(),
-                                                   rulesList.get(j).getQuestion(),
-                                                   new Answer(input, rulesList.get(j).getTheMap())));
+                            rulesList.get(j).getQuestion(),
+                            new Answer(input, rulesList.get(j).getTheMap())));
                     break;
                 }
             }
@@ -67,7 +67,7 @@ public class RuleRepository {
         @Override
         public Question next() {
             Question question = qList.get(currentIndex);
-            currentIndex ++;
+            currentIndex++;
             return question;
         }
 
