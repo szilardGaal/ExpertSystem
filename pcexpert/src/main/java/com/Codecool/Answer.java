@@ -1,22 +1,23 @@
 package com.Codecool;
 
-import java.util.Scanner;
+import java.util.HashMap;
 
 public class Answer {
 
     private Value value;
+    private HashMap<String, Boolean> theMap;
 
 
-    public Answer(String input) {
+    public Answer(String input, HashMap<String, Boolean> inputMap) {
+        theMap = inputMap;
         value = new SingleValue(input, evaluateAnswerByInput(input));
     }
 
     public boolean evaluateAnswerByInput(String input) {
-        return false;
+        return theMap.get(input);
     }
 
-    public void addValue(Value value) {
+    public Value getValue() {
+        return value;
     }
-
-
 }

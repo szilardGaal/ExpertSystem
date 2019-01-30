@@ -19,6 +19,10 @@ public class Rule {
         return id;
     }
 
+    public HashMap<String, Boolean> getTheMap() {
+        return evals;
+    }
+
     public Set<String> getIdSet() {
         return evals.keySet();
     }

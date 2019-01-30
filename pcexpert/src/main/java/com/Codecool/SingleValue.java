@@ -4,16 +4,23 @@ import java.util.List;
 
 public class SingleValue extends Value {
 
+    private Boolean value;
+    private String param;
+
     public SingleValue(String param, boolean selectionType) {
+        this.value = selectionType;
+        this.param = param;
     }
 
+
+
     @Override
-    public List<String> getInputPattern() {
-        return null;
+    public String getInputPattern() {
+        return param;
     }
 
     @Override
     public boolean getSelectionType() {
-        return false;
+        return value;
     }
 }

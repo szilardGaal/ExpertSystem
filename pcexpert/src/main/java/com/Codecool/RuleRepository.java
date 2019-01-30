@@ -30,7 +30,7 @@ public class RuleRepository {
                 if (rulesList.get(j).getIdSet().contains(input)) {
                     questionsList.add(new Question(rulesList.get(j).getId(),
                                                    rulesList.get(j).getQuestion(),
-                                                   new Answer(input)));
+                                                   new Answer(input, rulesList.get(0).getTheMap())));
                     break;
                 }
             }

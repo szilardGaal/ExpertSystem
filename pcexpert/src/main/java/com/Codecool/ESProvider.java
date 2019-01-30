@@ -45,7 +45,7 @@ public class ESProvider {
     for (int i = 0; i< flist.size();i++){
         Set<String> tempset = flist.get(i).getIdSet();
         for (String id : tempset){
-            if (flist.get(i).getValueById(id) != qlist.get(i).getAnswer().getValue()) {
+            if (flist.get(i).getValueById(id) != qlist.get(i).getAnswer().getValue().getSelectionType()) {
 
                 continue;
 
