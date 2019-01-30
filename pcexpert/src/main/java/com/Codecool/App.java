@@ -11,6 +11,9 @@ public class App {
 
         provider.getRRepo().getAnswers();
         List<String> compsForYou = provider.matchAnswersIterator();
+        if(compsForYou.size() == 0) {
+            System.out.println("No such computer.");
+        }
         for (String comp : compsForYou) {
             System.out.println(comp);
         }
