@@ -49,7 +49,7 @@ public class ESProvider {
                 if (fact.getValueById(id) != rRepo.getQuestionByID(id).getAnswer().getValue().getSelectionType()) {
                     break;
                 }
-                if (i == set.size() - 1) {
+                if (i == set.size()) {
                     computers.add(fact.getDescription());
                 }
             }
