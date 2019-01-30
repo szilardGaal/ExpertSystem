@@ -2,8 +2,8 @@ package com.Codecool;
 
 public class ESProvider {
 
-    FactRepository fRepo;
-    RuleRepository rRepo;
+    private FactRepository fRepo;
+    private RuleRepository rRepo;
 
     public ESProvider(FactParser fParser, RuleParser rParser) {
         fParser.load();

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Answer {
 
-    Value value;
+    private Value value;
 
 
     public Answer(String input) {

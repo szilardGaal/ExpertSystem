@@ -8,7 +8,7 @@ import java.io.File;
 
 public abstract class XMLParser {
 
-    Document doc;
+    protected Document doc;
 
     public void loadXMLDocument(String path) {
         try {

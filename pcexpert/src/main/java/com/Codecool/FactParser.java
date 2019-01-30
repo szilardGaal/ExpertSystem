@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class FactParser extends XMLParser {
 
-    FactRepository factRepo = new FactRepository();
+    private FactRepository factRepo = new FactRepository();
 
     public FactParser(String path) {
         loadXMLDocument(path);
