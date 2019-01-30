@@ -1,5 +1,6 @@
 package com.Codecool;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
@@ -30,26 +31,53 @@ public class ESProvider {
         return "";
     }
 
-    public RuleRepository getRRepo() { return rRepo;}
+    public RuleRepository getRRepo() {
+        return rRepo;
+    }
 
+    public List<String> matchAnswersIterator() {
+        List <String> computers = new ArrayList<>();
 
-    public void matchAnswers() {
-        List<Question> qlist = rRepo.getQuestionsList();
-        System.out.println(qlist.toString());
-        List<Fact> flist = fRepo.getFactsList();
-        System.out.println(flist.toString());
-        for (int i = 0; i< flist.size();i++){
-            Set<String> tempset = flist.get(i).getIdSet();
-            for (String id : tempset) {
-                if (flist.get(i).getValueById(id) == qlist.get(i).getAnswer().getValue().getSelectionType()) {
-                    if (i == 3) {
-                        System.out.println("Good one");
-                    } else {
-                        continue;
-                    }
+        FactRepository.FactIterator fIter = fRepo.getIterator();
+
+        while (fIter.hasNext()) {
+            Fact fact = fIter.next();
+            Set<String> set = fact.getIdSet();
+            int i = 0;
+            for (String id : set) {
+                i++;
+                if (fact.getValueById(id) != rRepo.getQuestionByID(id).getAnswer().getValue().getSelectionType()) {
+                    break;
+                }
+                if (i == set.size() - 1) {
+                    computers.add(fact.getDescription());
                 }
             }
+        }
+        return computers;
     }
+
+
+    public void matchAnswers(){
+
+        List<Question> qlist = rRepo.getQuestionsList();
+
+        for (int i = 0;i<qlist.size();i++ ){
+            qlist.get(i).getAnswer();
+            qlist.get(i).getId();
+        }
+        List<Fact> flist = fRepo.getFactsList();
+        for (int i = 0; i< flist.size();i++){
+            Set<String> tempset = flist.get(i).getIdSet();
+            for (String id : tempset){
+                if (flist.get(i).getValueById(id) != qlist.get(i).getAnswer().getValue().getSelectionType()) {
+
+                    continue;
+
+                }
+                System.out.println("addtolist");
+            }
+        }
 
     }
 }

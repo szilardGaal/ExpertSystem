@@ -23,6 +23,9 @@ public class App
 
         provider.getRRepo().getAnswers();
         System.out.println(provider.getRRepo().getQuestionsList());
-        provider.matchAnswers();
+        List<String> compsForYou = provider.matchAnswersIterator();
+        for (String comp : compsForYou) {
+            System.out.println(comp);
+        }
     }
 }

@@ -6,9 +6,7 @@ import java.util.ArrayList;
 
 public class FactRepository {
 
-    private FactIterator factIter = new FactIterator();
     private List<Fact> factsList = new ArrayList<>();
-
 
     public void addFact(Fact fact) {
         factsList.add(fact);
@@ -20,21 +18,26 @@ public class FactRepository {
     }
 
     public FactIterator getIterator() {
-        return factIter;
+        return new FactIterator(factsList);
     }
 
-    private class FactIterator implements Iterator {
+    public class FactIterator implements Iterator {
 
         private int currentIndex = 0;
+        private List<Fact> fList;
 
-        @Override
-        public boolean hasNext() {
-            return currentIndex < factsList.size();
+        public FactIterator(List<Fact> fList) {
+            this.fList = fList;
         }
 
         @Override
-        public Object next() {
-            Fact fact = factsList.get(currentIndex);
+        public boolean hasNext() {
+            return currentIndex < fList.size();
+        }
+
+        @Override
+        public Fact next() {
+            Fact fact = fList.get(currentIndex);
             currentIndex ++;
             return fact;
         }
