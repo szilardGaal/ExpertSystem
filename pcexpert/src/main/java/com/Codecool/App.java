@@ -10,7 +10,6 @@ public class App {
         ESProvider provider = new ESProvider(fParser, rParser);
 
         provider.getRRepo().getAnswers();
-        System.out.println(provider.getRRepo().getQuestionsList());
         List<String> compsForYou = provider.matchAnswersIterator();
         for (String comp : compsForYou) {
             System.out.println(comp);

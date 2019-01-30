@@ -49,9 +49,7 @@ public class RuleParser extends XMLParser {
                         NodeList answersChildren = answers.getChildNodes();
                         for (int l = 1; l < answersChildren.getLength(); l++) {
                             Node answersChild = answersChildren.item(l);
-                            System.out.println("0");
                             if (answersChild.getNodeType() == answersChild.ELEMENT_NODE) {
-                                System.out.println("1");
                                 Element answersChildElement = (Element) answersChild;
                                 boolean answerValue = Boolean.valueOf(answersChildElement.getAttribute("value"));
                                 NodeList answersGrandchildren = answersChild.getChildNodes();
