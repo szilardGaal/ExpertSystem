@@ -26,7 +26,7 @@ class FactRepositoryTest {
         FactRepository fp = new FactRepository();
         int previousSize = fp.getFactsList().size();
 
-        fp.addFact(new Fact("test", "test"));
+        fp.addFact(new Fact("testfact", "testdescription"));
 
         assertEquals(previousSize + 1, fp.getFactsList().size());
     }
@@ -44,19 +44,19 @@ class FactRepositoryTest {
         // given
         FactRepository fp = new FactRepository();
 
-        fp.addFact(new Fact("test1", "test1"));
-        fp.addFact(new Fact("test2", "test2"));
+        fp.addFact(new Fact("testfact1", "testdescription1"));
+        fp.addFact(new Fact("testfact2", "testdescription2"));
 
         FactRepository.FactIterator iterator = fp.getIterator();
 
         // when/then
         assertTrue(iterator.hasNext());
         Fact fact1 = iterator.next();
-        assertEquals(fact1.getId(), "test1");
+        assertEquals(fact1.getId(), "testfact1");
 
         assertTrue(iterator.hasNext());
         Fact fact2 = iterator.next();
-        assertEquals(fact2.getId(), "test2");
+        assertEquals(fact2.getId(), "testfact2");
 
         assertFalse(iterator.hasNext());
     }

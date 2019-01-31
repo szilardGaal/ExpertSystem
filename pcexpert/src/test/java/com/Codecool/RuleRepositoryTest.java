@@ -12,7 +12,7 @@ public class RuleRepositoryTest {
         RuleRepository rp = new RuleRepository();
         int previousSize = rp.getRulesList().size();
 
-        rp.addRule(new Rule("test", "test"));
+        rp.addRule(new Rule("test", "testquestion"));
 
         assertEquals(previousSize + 1, rp.getRulesList().size());
     }
@@ -30,19 +30,19 @@ public class RuleRepositoryTest {
         // given
         RuleRepository rp = new RuleRepository();
 
-        rp.addRule(new Rule("test1", "test1"));
-        rp.addRule(new Rule("test2", "test2"));
+        rp.addRule(new Rule("test1", "testquestion1"));
+        rp.addRule(new Rule("test2", "testquestion2"));
 
         RuleRepository.QuestionIterator iterator = rp.getIterator();
 
         // when/then
         assertTrue(iterator.hasNext());
         Question rule1 = iterator.next();
-        assertEquals(rule1.getId(), "test1");
+        assertEquals(rule1.getId(), "testquestion1");
 
         assertTrue(iterator.hasNext());
         Question rule2 = iterator.next();
-        assertEquals(rule2.getId(), "test2");
+        assertEquals(rule2.getId(), "testquestion2");
 
         assertFalse(iterator.hasNext());
     }
