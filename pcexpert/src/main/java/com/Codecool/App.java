@@ -11,11 +11,16 @@ public class App {
 
         provider.getRRepo().getAnswers();
         List<String> compsForYou = provider.matchAnswersIterator();
+        System.out.println("Let me check the stock...");
+        try{
+            Thread.sleep(2000);
+        }catch(InterruptedException e){
+        }
         if(compsForYou.size() == 0) {
-            System.out.println("No such computer.");
+            System.out.println("We don't have any computers that would suit your needs, Sir.");
         }
         for (String comp : compsForYou) {
-            System.out.println(comp);
+            System.out.println("Our recommendation is: " + comp);
         }
     }
 }
